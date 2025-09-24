@@ -3,183 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <title>MY GAMES.COM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Orbitron', 'Segoe UI', 'Arial', sans-serif; }
+    .glass {
+      backdrop-filter: blur(12px) saturate(180%);
+      background-color: rgba(44, 46, 54, 0.55);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.22);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .glow:hover {
+      box-shadow: 0 2px 16px 0 rgba(251,191,36,0.7), 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+    .accent-gradient {
+      background: linear-gradient(90deg, #eab308 16%, #fdba74 96%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradientBG 3s ease infinite alternate;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans">
+<body class="min-h-screen bg-gradient-to-br from-[#101016] via-[#15181f] to-[#212327] text-white">
 
-  <!-- Title -->
-  <header class="py-10 text-center">
-    <h1 class="text-5xl font-extrabold tracking-wider text-yellow-400 drop-shadow-lg animate-pulse">
-      🎮 MY GAMES 🎮
+  <!-- Sticky Frosted Header -->
+  <header class="sticky top-0 z-20 glass py-8 shadow-lg mb-16">
+    <h1 class="text-5xl font-extrabold tracking-wider accent-gradient animate-pulse animate-gradient drop-shadow-lg text-center">
+      🎮 MY GAMES <span class="animate-bounce inline-block">🎮</span>
     </h1>
-    <p class="mt-3 text-gray-300 text-lg">Play & Enjoy My Collection of Games</p>
+    <p class="mt-3 text-lg text-gray-200 text-center">Play & Enjoy <span class="accent-gradient font-bold">My Collection of Games</span></p>
   </header>
 
   <!-- Game Grid -->
-  <main class="grid gap-10 px-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto pb-20">
+  <main class="grid gap-12 px-5 md:px-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-8xl mx-auto pb-20">
 
-    <!-- Game Card Template -->
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="car.jpeg" alt="Car Game" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    <!-- Game Card Example: Repeat for all games below -->
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="car.jpeg" alt="Car Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 blur-0">
+        <span class="absolute top-0 right-0 m-3 rounded-lg px-3 py-1 bg-yellow-500/80 text-xs font-semibold text-black shadow-lg select-none">Popular</span>
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://rs-rising-shooters.vercel.app/cargame.html" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 border-2 border-yellow-300 shadow-lg hover:from-yellow-400 hover:to-red-500 hover:shadow-yellow-500/50 transition duration-200 glow">
             🚗 Car Game
           </button>
         </a>
       </div>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="shangchi.png" alt="Shangchi Game" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="shangchi.png" alt="Shangchi Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://rs-rising-shooters.vercel.app/shangchigame.html" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 border-2 border-yellow-300 shadow-lg hover:from-yellow-400 hover:to-red-500 hover:shadow-orange-500/50 transition duration-200 glow">
             🥋 Shangchi Game
           </button>
         </a>
       </div>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="RSTG.jpg" alt="RS Game" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="RSTG.jpg" alt="RS Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://rs-rising-shooters.vercel.app/" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 border-2 border-yellow-300 shadow-lg hover:from-yellow-400 hover:to-red-500 hover:shadow-orange-400/50 transition duration-200 glow">
             🔫 RS
           </button>
         </a>
       </div>
     </div>
-
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="snake.jpeg" alt="Snake & Ladders" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+  
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="snake.jpeg" alt="Snake &amp; Ladders" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://rs-rising-shooters.vercel.app/snakeandladdgame.html" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
-            🐍 Snake & Ladders
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 border-2 border-yellow-300 shadow-lg hover:from-yellow-400 hover:to-red-500 hover:shadow-orange-400/50 transition duration-200 glow">
+            🐍 Snake &amp; Ladders
           </button>
         </a>
       </div>
     </div>
-
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="shooter.png" alt="Bubble Shooter" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="shooter.png" alt="Bubble Shooter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://rs-rising-shooters.vercel.app/shootergame.html" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 border-2 border-yellow-300 shadow-lg hover:from-yellow-400 hover:to-red-500 hover:shadow-yellow-400/50 transition duration-200 glow">
             🎈 Bubble Shooter
           </button>
         </a>
       </div>
     </div>
-
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="jet.png" alt="Jet Fighter" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="jet.png" alt="Jet Fighter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://ns-portfolio-delta.vercel.app/jetfightergame.html" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 border-2 border-yellow-300 shadow-lg hover:from-yellow-400 hover:to-red-500 hover:shadow-orange-300/50 transition duration-200 glow">
             ✈️ Jet Fighter (Desktop)
           </button>
         </a>
       </div>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="WAR2.jpg" alt="KVST3D" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="WAR2.jpg" alt="KVST3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://nsstudio-html.github.io/KABIR-VS-TIGER-3D/" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-lime-400 to-yellow-400 border-2 border-yellow-200 shadow-lg hover:from-green-400 hover:to-yellow-500 hover:shadow-lime-400/50 transition duration-200 glow">
             🐅 KABIR VS TIGER 3D
           </button>
         </a>
       </div>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="highway.jpg" alt="HIGHWAY" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="highway.jpg" alt="HIGHWAY" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://nsstudio-html.github.io/HIGH-WAY_FURY_MOTO-RACING/" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-fuchsia-500 to-yellow-300 border-2 border-fuchsia-200 shadow-lg hover:from-yellow-400 hover:to-fuchsia-500 hover:shadow-yellow-200/50 transition duration-200 glow">
             🏍 HIGHWAY FURY (MOTO RACING)
           </button>
         </a>
       </div>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="dark.png" alt="DarkRoad" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    <div class="glass transition-transform hover:scale-105 duration-300 glow group">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="dark.png" alt="DarkRoad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
       </div>
-      <div class="p-5 flex flex-col items-center">
+      <div class="p-6 flex flex-col items-center">
         <a href="https://nsstudio-html.github.io/DARK-ROAD-RIDERS-OF-DOOM-/" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-400 hover:from-yellow-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
+          <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-black via-gray-900 to-gray-800 border-2 border-gray-300 shadow-lg hover:from-yellow-400 hover:to-gray-900 hover:shadow-yellow-700/50 transition duration-200 glow">
             🌑 DARK-ROAD RIDERS_OF_DOOM
           </button>
         </a>
       </div>
     </div>
-
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="salaar.jpeg" alt="SALAAR" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+    
+    <!-- Coming Soon Games -->
+    <div class="glass transition-transform hover:scale-105 duration-300 group flex flex-col justify-end">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="salaar.jpeg" alt="SALAAR" class="w-full h-full object-cover grayscale blur-sm group-hover:blur-0 transition duration-500">
+        <span class="absolute top-2 left-2 px-4 py-1 bg-gradient-to-r from-yellow-400 via-green-300 to-green-600 text-black font-bold text-xs rounded-xl shadow">Coming Soon</span>
       </div>
-      <div class="p-5 flex flex-col items-center">
-        <a href="" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-yellow-500 to-green-500 border-2 border-yellow-400 hover:from-orange-400 hover:to-red-500 shadow-lg active:scale-95 transition duration-200">
-            COMING SOON SALAAR GAME
-          </button>
-        </a>
-      </div>
-    </div>
-
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="OG.webp" alt="OG" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-      </div>
-      <div class="p-5 flex flex-col items-center">
-        <a href="" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-black-500 to-red-500 border-2 border-gray-400 hover:from-red-400 hover:to-black-500 shadow-lg active:scale-95 transition duration-200">
-            COMING SOON OG GAME
-          </button>
-        </a>
+      <div class="p-6 flex flex-col items-center">
+        <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-500 via-green-400 to-gray-400 border-2 border-yellow-400 shadow-lg text-black opacity-80 cursor-not-allowed glow">
+          COMING SOON SALAAR GAME
+        </button>
       </div>
     </div>
-
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition transform duration-300">
-      <div class="w-full aspect-video overflow-hidden">
-        <img src="G.jpg" alt="GLADIATOR" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+  
+    <div class="glass transition-transform hover:scale-105 duration-300 group flex flex-col justify-end">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="OG.webp" alt="OG" class="w-full h-full object-cover grayscale blur-sm group-hover:blur-0 transition duration-500">
+        <span class="absolute top-2 left-2 px-4 py-1 bg-gradient-to-r from-black via-red-600 to-red-900 text-white font-bold text-xs rounded-xl shadow">Coming Soon</span>
       </div>
-      <div class="p-5 flex flex-col items-center">
-        <a href="" class="w-full">
-          <button class="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-brown-500 to-gold-500 border-2 border-brown-400 hover:from-orange-400 hover:to-brown-500 shadow-lg active:scale-95 transition duration-200">
-            COMING SOON GLADIATOR GAME
-          </button>
-        </a>
+      <div class="p-6 flex flex-col items-center">
+        <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-black via-red-500 to-gray-500 border-2 border-red-300 shadow-lg text-white opacity-80 cursor-not-allowed glow">
+          COMING SOON OG GAME
+        </button>
       </div>
     </div>
+  
+    <div class="glass transition-transform hover:scale-105 duration-300 group flex flex-col justify-end">
+      <div class="overflow-hidden rounded-t-2xl relative aspect-video">
+        <img src="G.jpg" alt="GLADIATOR" class="w-full h-full object-cover grayscale blur-sm group-hover:blur-0 transition duration-500">
+        <span class="absolute top-2 left-2 px-4 py-1 bg-gradient-to-r from-yellow-700 via-orange-600 to-yellow-200 text-black font-bold text-xs rounded-xl shadow">Coming Soon</span>
+      </div>
+      <div class="p-6 flex flex-col items-center">
+        <button class="w-full py-3 text-lg font-extrabold rounded-xl bg-gradient-to-r from-yellow-900 via-yellow-500 to-yellow-200 border-2 border-yellow-500 shadow-lg text-black opacity-80 cursor-not-allowed glow">
+          COMING SOON GLADIATOR GAME
+        </button>
+      </div>
+    </div>
+    <!-- End of Cards -->
 
   </main>
 
   <!-- Footer -->
-  <footer class="py-6 text-center bg-gray-900/80 border-t border-gray-700">
-    <p class="text-gray-400">&copy; 2025 MY GAMES.COM | Designed by <span class="text-yellow-400">Sasank</span></p>
+  <footer class="glass py-6 text-center border-t border-gray-800 mt-24">
+    <p class="text-gray-300">&copy; 2025 MY GAMES.COM | Designed by 
+      <span class="text-yellow-400 font-bold">Sasank</span>
+    </p>
+    <p class="mt-1 text-xs text-gray-500">All rights reserved. Themed by <span class="font-semibold accent-gradient">TailwindCSS</span>.</p>
   </footer>
 
 </body>
